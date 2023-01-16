@@ -78,7 +78,7 @@ body {
     font-size: medium;
  border-right: 0.75em solid #d1d5db;
  margin: 1em;
- white-space: nowrap;
+ white-space: pre-wrap;
     overflow: hidden;
     color: #d1d5db;
 }
