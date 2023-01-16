@@ -1,0 +1,16 @@
+{
+  "classe:class": {
+    "definition:def": "Une classe en TypeScript est un plan pour créer des objets (une instance d'une classe), fournir des valeurs initiales pour l'état (variables membres ou attributs) et implémenter des comportements (fonctions membres ou méthodes).",
+    "definir:creer:cree": "Pour définir une classe en TypeScript, utilisez le mot-clé 'class', suivi du nom de la classe. La définition de la classe peut inclure des variables membres, des constructeurs et des méthodes. Exemple : class Person { name: string; age: number; constructor(name: string, age: number) { this.name = name; this.age = age; } sayHello() { console.log(`Bonjour, je m'appelle ${this.name} et j'ai ${this.age} ans`); } } ",
+    "instantiate:instancier:init": "Pour créer une instance d'une classe, utilisez le mot-clé 'new', suivi du nom de la classe, entouré de parenthèses. Exemple : let person1 = new Person('John Doe', 30); person1.sayHello(); // Affiche 'Bonjour, je m'appelle John Doe et j'ai 30 ans' "
+  },
+  "variable:var": {
+    "definition:def": "En TypeScript, une variable est un emplacement de stockage nommé qui contient une valeur d'un type de données spécifique.",
+    "definir:creer:cree": "Pour définir une variable en TypeScript, utilisez le mot-clé 'var', suivi du nom de la variable et d'une valeur optionnelle. Le type de données de la variable sera déduit de la valeur, mais il peut également être explicitement défini en utilisant une annotation de type. Exemple : var myVariable = 'une chaîne de caractères'; // Infer the type as string var myNumber: number = 25; ",
+    "initialiser:init": "Initialiser une variable signifie lui attribuer une valeur pour la première fois. Exemple var myVariable: string; myVariable = 'Une valeur'; "
+  },
+  "type": {
+    "definition:def": "En TypeScript, un type fait référence à la sorte spécifique de valeur que peut contenir ou retourner une variable, une expression ou une fonction.",
+    "utiliser:use": "TypeScript prend en charge plusieurs types tels que number, string, boolean, array, tuple, enum, any, void, null et undefined. Ils peuvent être utilisés pour définir le type d'une variable ou le type de retour d'une fonction. En utilisant ces types, TypeScript peut effectuer une vérification de type statique pour éviter les erreurs à l'exécution et améliorer la qualité du code. Exemple : var myString: string = 'une chaîne de caractères'; var myNumber: number = 25; var myBoolean: boolean = true; var myArray: string[] = ['élément1', 'élément2']; var myTuple: [string, number] = ['John Doe', 30]; enum Colors {Red, Green, Blue}; var myEnum: Colors = Colors.Green; var myAny: any = 'Je peux être de n'importe quel type'; function myVoidFunction(): void { console.log('Je ne retourne rien') } var myNull: null = null; var myUndefined: undefined = undefined; "
+  }
+}
