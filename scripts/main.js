@@ -5,47 +5,43 @@ const response = document.querySelector('.response');
 const animationSpeed = 2;
 
 const animateResponse = (data) => {
-  response.value = data;
-  const newAnswerContainer = document.createElement('div');
-  newAnswerContainer.className = 'answerContainer';
-  const newParagraph = document.createElement('p');
-  newParagraph.className = 'answer';
-  newParagraph.innerHTML = data;
-  newParagraph.style.width = `80vw`;
+  const answerContainer = document.createElement('div');
+  answerContainer.className = 'answerContainer';
+  const paragraph = document.createElement('p');
+  paragraph.className = 'answer';
+  paragraph.innerHTML = data;
+  paragraph.style.width = `76vw`;
   // newParagraph.style.width = `${data.length}ch`;
-  newParagraph.style.WebkitAnimation = `typing ${animationSpeed}s steps(${data.length}, end)`;
-  newAnswerContainer.appendChild(newParagraph);
+  paragraph.style.WebkitAnimation = `typing ${animationSpeed}s steps(${data.length}, end)`;
+  answerContainer.appendChild(paragraph);
 
-  const span = document.createElement('span');
-  newAnswerContainer.appendChild(span);
-
-  response.appendChild(newAnswerContainer);
+  response.appendChild(answerContainer);
   window.scrollTo(0, document.body.scrollHeight);
 };
 
-const chatGPTForm = document.querySelector('.questionForm');
-chatGPTForm.addEventListener('submit', (e) => {
+const questionForm = document.querySelector('.questionForm');
+questionForm.addEventListener('submit', (e) => {
   e.preventDefault();
   sendQuery();
 });
-const chatGPTQuestion = document.querySelector('.question');
+const question = document.querySelector('.question');
 const sendBtn = document.querySelector('.sendButton');
 sendBtn.addEventListener('click', () => {
   sendQuery();
 });
 
 function sendQuery() {
-  const newQueryContainer = document.createElement('div');
-  newQueryContainer.className = 'queryContainer';
-  const newParagraph = document.createElement('p');
-  newParagraph.className = 'query';
-  newParagraph.innerHTML = chatGPTQuestion.value;
-  newQueryContainer.appendChild(newParagraph);
-  response.appendChild(newQueryContainer);
+  const queryContainer = document.createElement('div');
+  queryContainer.className = 'queryContainer';
+  const paragraph = document.createElement('p');
+  paragraph.className = 'query';
+  paragraph.innerHTML = question.value;
+  queryContainer.appendChild(paragraph);
+  response.appendChild(queryContainer);
 
-  const result = answerQuestion(chatGPTQuestion.value);
+  const result = answerQuestion(question.value);
 
   animateResponse(result);
 
-  chatGPTQuestion.value = '';
+  question.value = '';
 }

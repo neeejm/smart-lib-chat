@@ -61,9 +61,6 @@ body {
     line-height: 1rem;
     text-align: center;
 }
-.disclaimer a:visited {
-    color: hsla(0,0%,100%,.5);
-}
 
 .queryContainer {
     background-color: rgba(52,53,65,1);
@@ -81,7 +78,7 @@ body {
     font-size: medium;
  border-right: 0.75em solid #d1d5db;
  margin: 1em;
- white-space: pre-wrap;
+ white-space: nowrap;
     overflow: hidden;
     color: #d1d5db;
 }
@@ -113,8 +110,4 @@ body {
     rotate: 90deg;
     color: rgba(172,172,190,1);
     cursor: pointer;
-}
-
-#dots {
-    display: none;
 }

@@ -41,6 +41,10 @@ export const answerQuestion = (question) => {
     let data = getTechData(keyword);
 
     // subject level
+    if (keywords.length === 0) {
+      return data['self'];
+    }
+
     if (
       Object.keys(data).some((ks) =>
         (keyword = ks).split(delimeter).some((k) => keywords.includes(k))
@@ -61,7 +65,6 @@ export const answerQuestion = (question) => {
       ) {
         return data[keyword];
       } else {
-        // return data['definition:def'];
         return 'Je ne sais pas';
       }
     }
