@@ -35,8 +35,21 @@ export const answerQuestion = (question) => {
   let keywords = extractKeywords(question.toLowerCase());
   let keyword = '';
 
+  if (
+    keywords.join(' ').toLocaleLowerCase() === 'hello world' ||
+    keywords.join(' ').toLocaleLowerCase() === 'bonjour'
+  ) {
+    return 'Bonjour, bienvenue à la librairie intélligente 🤓';
+  }
+
+  if (keywords.join(' ').toLocaleLowerCase() === 'rick') {
+    return `<button onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Watch on YouTube</button>`;
+  }
+
   // techonologies level
-  if (technologiesKeywords.some((k) => keywords.includes((keyword = k)))) {
+  https: if (
+    technologiesKeywords.some((k) => keywords.includes((keyword = k)))
+  ) {
     keywords.splice(keywords.indexOf(keyword), 1);
     let data = getTechData(keyword);
 
