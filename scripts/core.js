@@ -37,6 +37,7 @@ export const answerQuestion = (question) => {
 
   // techonologies level
   if (technologiesKeywords.some((k) => keywords.includes((keyword = k)))) {
+    keywords = keywords.filter((el) => !technologiesKeywords.includes(el));
     let data = getTechData(keyword);
 
     // subject level
@@ -46,11 +47,10 @@ export const answerQuestion = (question) => {
 
     if (
       Object.keys(data).some((ks) =>
-        (keyword = ks).split(delimeter).some((k) => {
-          return keywords.includes(k);
-        })
+        (keyword = ks).split(delimeter).some((k) => keywords.includes(k))
       )
     ) {
+      keywords = keywords.filter((el) => !keyword.includes(el));
       data = data[keyword];
 
       // action level
