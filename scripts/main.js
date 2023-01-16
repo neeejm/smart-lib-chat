@@ -10,8 +10,8 @@ const animateResponse = (data) => {
   const paragraph = document.createElement('p');
   paragraph.className = 'answer';
   paragraph.innerHTML = data;
-  paragraph.style.width = `76vw`;
-  // newParagraph.style.width = `${data.length}ch`;
+  paragraph.style.width = `77vw`;
+  // paragraph.style.width = `${data.length}ch`;
   paragraph.style.WebkitAnimation = `typing ${animationSpeed}s steps(${data.length}, end)`;
   answerContainer.appendChild(paragraph);
 
@@ -44,4 +44,5 @@ function sendQuery() {
   animateResponse(result);
 
   question.value = '';
+  Prism.highlightAll();
 }
