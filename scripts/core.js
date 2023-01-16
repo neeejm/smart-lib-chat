@@ -43,7 +43,7 @@ export const answerQuestion = (question) => {
   }
 
   if (keywords.join(' ').toLocaleLowerCase() === 'rick') {
-    return `<button onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Watch on YouTube</button>`;
+    return `<button onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';">i dare you to click me 🥸 </button>`;
   }
 
   // techonologies level
