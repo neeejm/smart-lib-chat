@@ -31,6 +31,16 @@ const getTechData = (tech) => {
   }
 };
 
+const getIndexOf = (data1, data2) => {
+  let index = -1;
+  data2.forEach((innerEl) => {
+    if (data1.includes(innerEl)) {
+      index = data1.indexOf(innerEl);
+    }
+  });
+  return index;
+};
+
 export const answerQuestion = (question) => {
   let keywords = extractKeywords(question.toLowerCase());
   let keyword = '';
@@ -47,9 +57,7 @@ export const answerQuestion = (question) => {
   }
 
   // techonologies level
-  https: if (
-    technologiesKeywords.some((k) => keywords.includes((keyword = k)))
-  ) {
+  if (technologiesKeywords.some((k) => keywords.includes((keyword = k)))) {
     keywords.splice(keywords.indexOf(keyword), 1);
     let data = getTechData(keyword);
 
@@ -63,7 +71,8 @@ export const answerQuestion = (question) => {
         (keyword = ks).split(delimeter).some((k) => keywords.includes(k))
       )
     ) {
-      keywords.splice(keywords.indexOf(keyword), 1);
+      keywords.splice(getIndexOf(keywords, keyword.split(':')), 1);
+
       data = data[keyword];
 
       // action level
