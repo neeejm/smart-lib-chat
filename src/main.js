@@ -49,16 +49,7 @@ const formatJsCode = () => {
       jsCodes[jsCodes.length - 1].innerHTML = prettier.format(
         jsCodes[jsCodes.length - 1].innerText,
         {
-          parser: 'babel',
-          plugins: prettierPlugins
-        }
-      );
-    } catch {}
-    try {
-      jsCodes[jsCodes.length - 1].innerHTML = prettier.format(
-        jsCodes[jsCodes.length - 1].innerText,
-        {
-          parser: 'angular',
+          parser: 'typescript',
           plugins: prettierPlugins
         }
       );
