@@ -37,18 +37,21 @@
           ></path>
         </svg>
       </form>
-      <div class="disclaimer"></div>
     </div>
 
-    <script src="./scripts/prism.js"></script>
+    <script src="./libs/prettier.min.js"></script>
+    <script src="./libs/babel-parser.min.js"></script>
+    <script src="./libs/html-parser.min.js"></script>
+
+    <script src="./libs/prism.min.js"></script>
 
     <script
       type="module"
-      src="../scripts/fr.js"
+      src="./libs/fr.js"
     ></script>
     <script
       type="module"
-      src="../scripts/keyword_extractor.js"
+      src="./libs/keyword_extractor.js"
     ></script>
     <script
       type="module"
@@ -56,19 +59,20 @@
     ></script>
     <script
       type="module"
-      src="../data/angular.json"
+      src="./data/angular.json"
     ></script>
     <script
       type="module"
-      src="../data/bootstrap.json"
+      src="./data/bootstrap.json"
+    ></script>
+
+    <script
+      type="module"
+      src="./src/core.js"
     ></script>
     <script
       type="module"
-      src="../scripts/core.js"
-    ></script>
-    <script
-      type="module"
-      src="../scripts/main.js"
+      src="./src/main.js"
     ></script>
   </body>
 </html>

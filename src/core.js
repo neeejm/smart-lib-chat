@@ -1,4 +1,4 @@
-import { extract } from './keyword_extractor.js';
+import { extract } from '../libs/keyword_extractor.js';
 import tsData from '../data/ts.json' assert { type: 'json' };
 import ngData from '../data/angular.json' assert { type: 'json' };
 import bpData from '../data/bootstrap.json' assert { type: 'json' };

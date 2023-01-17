@@ -3,7 +3,7 @@
   "component:compo": {
     "definition:def": "En utilisant Angular, un composant est un élément de l'interface utilisateur qui peut être réutilisé pour créer des pages web. Les composants Angular sont créés à l'aide d'une combinaison de balises HTML, de TypeScript et de métadonnées définies à l'aide de l'annotation @Component.",
     "definir:creer:cree": "Pour définir un composant Angular, vous devez utiliser l'annotation @Component et définir les propriétés telles que le sélecteur, le template et le style. Exemple : <pre><code class=language-javascript>@Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css'] }) export class AppComponent {title = 'mon-projet';}</code></pre>",
-    "instantiate:instancier:init": "Pour instancier un composant Angular, vous devez utiliser la balise correspondante au sélecteur défini dans le composant. Exemple :<pre><code class=language-javascript> <app-root> </app-root>",
+    "instantiate:instancier:init": "Pour instancier un composant Angular, vous devez utiliser la balise correspondante au sélecteur défini dans le composant. Exemple :<pre><code class=language-markup> &lt;app-root> &lt;/app-root>",
     "lifecycle:cycle de vie": "Les composants Angular ont un cycle de vie qui débute lors de la création du composant et se termine lors de sa destruction. Il existe des méthodes de cycle de vie telles que ngOnInit, ngOnChanges, ngOnDestroy, etc. qui peuvent être utilisées pour exécuter des tâches spécifiques lorsque le composant entre dans un état particulier du cycle de vie. Ces méthodes sont déclenchées automatiquement par Angular à des moments spécifiques de la vie du composant. Exemple : <pre><code class=language-javascript>export class AppComponent implements OnInit { ngOnInit() { console.log('Le composant a été initialisé');}}}</code></pre>"
   },
   "onInit:oninit": {
@@ -12,6 +12,6 @@
   },
   "event:evenement": {
     "definition:def": "Les événements sont des actions déclenchées par les utilisateurs ou par le système qui peuvent être capturées et gérées par les composants Angular. Les événements peuvent inclure des actions telles que cliquer sur un bouton, soumettre un formulaire, etc.",
-    "utiliser:use": "Pour utiliser les événements dans un composant Angular, vous devez utiliser la syntaxe (event) sur une balise HTML pour détecter l'événement et définir une méthode pour gérer cet événement dans le composant. Exemple : <pre><code class=language-markup><button (click)='handleClick()'>Cliquez-moi</button></code></pre>"
+    "utiliser:use": "Pour utiliser les événements dans un composant Angular, vous devez utiliser la syntaxe (event) sur une balise HTML pour détecter l'événement et définir une méthode pour gérer cet événement dans le composant. Exemple : <pre><code class=language-markup>&lt;button (click)=&quot;handleClick()&quot;>Cliquez-moi&lt;/button></code></pre>"
   }
 }
