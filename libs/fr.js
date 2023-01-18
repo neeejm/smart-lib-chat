@@ -5,6 +5,7 @@
 // via https://code.google.com/p/stop-words/
 
 export const stopwords = [
+  "c'est",
   'a',
   'à',
   'â',
